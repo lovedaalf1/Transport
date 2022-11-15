@@ -17,7 +17,7 @@ const Register = () => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSumit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const res = await axios.post(
@@ -60,7 +60,7 @@ const Register = () => {
           placeholder="password"
           onChange={handleChange}
         />
-        <button onClick={handleSumit}>Register</button>
+        <button onClick={handleSubmit}>Register</button>
         {err && <p>{err}</p>}
         <span>
           Do you have an account ? <Link to="/login">Login</Link>
